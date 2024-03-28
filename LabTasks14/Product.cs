@@ -7,7 +7,7 @@
         private string _model;
         private int _price;
         private int _cost;
-        private int _inCome;
+        private int _inCome = 0;
         private int _count;
 
         public Product(int id, string brandName, string model, int price, int cost, int availableCount, int saleCount)
@@ -32,7 +32,7 @@
                 $"InCome = {_inCome}, Count = {_count}");
         }
 
-        public void Sale(int count)
+        private void Sale(int count)
         {
             if (_count - count >= 0)
             {
